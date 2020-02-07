@@ -5,7 +5,19 @@ $(function(){
     const $deskInput = $('input#desk');
     const $coffeeTableInput = $('input#coffeeTable');
 
-    
+    // make function that changes the styles of the options clicked 
+    function changeButton(value){
+
+        // make a variable that will select the label that corresponds with the value
+        let selectedLabel = $(`label.${value}`);
+
+        // toggle the selected class on the chosen label
+        selectedLabel.toggleClass('selected');
+
+
+    }
+
+
     // make function to show the photo on the canvas and pass value selected
     function showPhoto(value){
         // make variable for the selected photo ** SUB THIS OUT LATER ****
@@ -17,13 +29,17 @@ $(function(){
 
     // make function that checks to see if desk or coffee table is selected, if value is laptop or notebook
     function checkValue(value) {
-        // if table or coffee table not selected,throw error
+        // if table or coffee table selected, then show the selections
         if ($deskInput.prop('checked') || $coffeeTableInput.prop('checked')) {
+            // then call function to show the photos
             showPhoto(value);
 
+            // and call function to change button styles
+            changeButton(value);
+
+        // if not selected, throw error
         } else {
             console.log('You need to choose a desk or coffee table!');
-
         }
     }
 
@@ -38,11 +54,10 @@ $(function(){
         } else {
             // call function that shows the photo
             showPhoto(selectedValue);
+
+            // call function that changes styles of the input when clicked
+            changeButton(selectedValue);
         }
-
-        
-
-
 
     });
 
