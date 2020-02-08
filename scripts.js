@@ -36,7 +36,7 @@ makeStudySpace.checkValue = function(value){
 
         // if not selected, throw error
     } else {
-        console.log('You need to choose a desk or coffee table!');
+        alert('You need to choose a desk or coffee table!');
     }
 }
 
@@ -60,8 +60,6 @@ makeStudySpace.init = function(){
 
     });
 }
-
-
 
 // document ready
 $(function(){
