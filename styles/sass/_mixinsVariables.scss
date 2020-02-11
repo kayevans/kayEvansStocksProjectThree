@@ -20,3 +20,9 @@ $color2: #ebb494;
 @mixin transition {
     transition: all 0.5s ease;
 }
+
+// function to make button styles on hover
+@mixin buttonHover{
+    background-color: $mainColour;
+    cursor: pointer;
+}

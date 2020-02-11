@@ -27,7 +27,9 @@ body{
 
 // default heading and label styles 
 h1,
-label{
+h2,
+label,
+button{
     font-family: $headingFont;
     text-transform: lowercase;
 }
@@ -42,15 +44,40 @@ h1{
 }
 
 // add the background graphic
-h1::after{
+h1::after,
+h2::after{
     content: '';
     position: absolute;
+    background-color: $mainColour;
+    z-index: -10;
+}
+
+h1::after{
     bottom: 20px;
     left: -5px;
     width: 780px;
     height: 20px;
-    background-color: $mainColour;
-    z-index: -10;
+}
+
+// h2 styles
+h2{
+    font-weight: 400;
+    font-size: 2.8rem;
+    position: relative;
+    margin: 10px 0;
+}
+
+// h2 after styles
+h2::after{
+    bottom: 8px;
+    left: -5px;
+    width: 315px;
+    height: 10px;
+}
+
+// change width of just first h2
+h2:first-of-type::after{
+    width: 185px;
 }
 
 // h3 styles
@@ -67,4 +94,10 @@ h3{
 // the class to show things in JS
 .show{
     display: block;
+}
+
+// make the main take up the entire hieght
+main{
+    height: 100vh;
+    padding-top: 180px;
 }

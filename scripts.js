@@ -51,6 +51,17 @@ makeStudySpace.checkValue = function(value){
 // initializing function
 makeStudySpace.init = function(){
 
+    // when click the start button, scroll down to the main
+    $('.startButton').on('click', function(){
+        // animate the body to scroll to the main
+        $('html, body').animate(
+            {
+                scrollTop: $('main').offset().top,
+            },
+            'slow',
+        );
+    })
+
     // when the radio buttons chosen, collect value and show the selected photo
     $('input[type=radio]').on('click', function(){
         // store the sitting pics in variable

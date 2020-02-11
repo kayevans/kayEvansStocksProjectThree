@@ -9,6 +9,8 @@ form{
     justify-content: space-between;
 }
 
+
+
 // label styles
 label{
     font-size: 2rem;
@@ -25,15 +27,13 @@ input[type="radio"]:hover + label,
 input[type="radio"]:focus + label,
 input[type="checkbox"]:hover + label,
 input[type="checkbox"]:focus + label{
-    background-color: $mainColour;
-    cursor: pointer;
+    @include buttonHover;
 }
 
 // TEMP: when label clicked/selected, change background colour
 input[type="radio"]:checked + label,
 input[type="checkbox"]:checked + label{
-    background-color: $mainColour;
-    cursor: pointer;
+    @include buttonHover;
 }
 
 // input styles

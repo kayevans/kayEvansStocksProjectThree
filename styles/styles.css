@@ -259,7 +259,9 @@ body {
 }
 
 h1,
-label {
+h2,
+label,
+button {
   font-family: "Zilla Slab", serif;
   text-transform: lowercase;
 }
@@ -270,15 +272,37 @@ h1 {
   position: relative;
 }
 
-h1::after {
+h1::after,
+h2::after {
   content: '';
   position: absolute;
+  background-color: #f3e8e1;
+  z-index: -10;
+}
+
+h1::after {
   bottom: 20px;
   left: -5px;
   width: 780px;
   height: 20px;
-  background-color: #f3e8e1;
-  z-index: -10;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2.8rem;
+  position: relative;
+  margin: 10px 0;
+}
+
+h2::after {
+  bottom: 8px;
+  left: -5px;
+  width: 315px;
+  height: 10px;
+}
+
+h2:first-of-type::after {
+  width: 185px;
 }
 
 h3 {
@@ -300,12 +324,35 @@ h3 {
   display: block;
 }
 
+main {
+  height: 100vh;
+  padding-top: 180px;
+}
+
 header {
-  padding: 80px 0 50px;
+  padding: 250px 0 50px;
+  height: 100vh;
 }
 
 header p {
   font-size: 2.2rem;
+}
+
+header button {
+  font-size: 2rem;
+  background-color: transparent;
+  border: 1px solid black;
+  width: 150px;
+  padding: 8px 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  margin-top: 30px;
+}
+
+header button:hover,
+header button:focus {
+  background-color: #f3e8e1;
+  cursor: pointer;
 }
 
 .options {
