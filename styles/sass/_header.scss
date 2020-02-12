@@ -7,6 +7,7 @@ header{
 header .wrapper{
     @include flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 // written content section
@@ -39,8 +40,9 @@ header button:focus{
 
 // change size of the image container
 header .imageContainer{
-    width: 25%;
-    padding-top: 50px;
+    min-width: 280px;
+    width: 10%;
+    padding-top: 60px;
 }
 
 

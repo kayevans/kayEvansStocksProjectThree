@@ -272,6 +272,11 @@ button {
   text-transform: lowercase;
 }
 
+h1,
+h2 {
+  line-height: 1;
+}
+
 h1 {
   font-size: 6rem;
   font-weight: 300;
@@ -287,9 +292,9 @@ h2::after {
 }
 
 h1::after {
-  bottom: 20px;
+  bottom: 5px;
   left: -5px;
-  width: 780px;
+  width: 100%;
   height: 20px;
 }
 
@@ -301,7 +306,7 @@ h2 {
 }
 
 h2::after {
-  bottom: 8px;
+  bottom: 0px;
   left: -5px;
   width: 315px;
   height: 10px;
@@ -326,8 +331,8 @@ h2:first-of-type::after {
           justify-content: space-between;
 }
 
-.show {
-  display: block !important;
+.canvas .imageContainer.show {
+  display: block;
 }
 
 main {
@@ -348,6 +353,8 @@ header .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 header .writtenContent {
@@ -377,8 +384,9 @@ header button:focus {
 }
 
 header .imageContainer {
-  width: 25%;
-  padding-top: 50px;
+  min-width: 280px;
+  width: 10%;
+  padding-top: 60px;
 }
 
 .options {
@@ -394,6 +402,9 @@ form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 label {
@@ -430,6 +441,7 @@ input[type="radio"] {
 .canvas {
   margin-top: 40px;
   width: 650px;
+  height: 400px;
   background-image: url(../assets/background-02.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -557,4 +569,16 @@ input[type="radio"] {
   bottom: 65px;
   position: absolute;
   z-index: 20;
+}
+
+@media (max-width: 1200px) {
+  .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }

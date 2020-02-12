@@ -109,6 +109,8 @@ makeStudySpace.init = function(){
             // if coffeeTable is selected, and desk is checked, throw an error
         } else if (selectedValue === 'coffeeTable' && makeStudySpace.$deskInput.prop('checked')){
             alert('You can only have one table type device!');
+            // uncheck the coffeetable 
+            $(`input#coffeeTable`).prop('checked', false);
 
             // else, show the photo
         } else{
