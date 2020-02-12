@@ -1,5 +1,102 @@
 // canvas overall styles
 .canvas{
-    width: 55%;
-    background-color: $mainColour;
+    margin-top: 40px;
+    width: 650px;
+    // background-color: $mainColour;
+    background-image: url(../assets/background-02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+
+}
+
+// ALL THE SELECTION STYLES
+
+// couch styles
+.canvas .couch{
+    @include photos(40%, 235px, 65px);
+}
+
+// desk styles
+.canvas .desk{
+    @include photos(28%, 260px, 60px);
+    z-index: 30;
+}
+
+// beanbag styles
+.canvas .beanBag{
+    @include photos(25%, 275px, 65px);
+}
+
+// coffee table styles
+.canvas .coffeeTable{
+    @include photos(35%, 250px, 55px);
+    z-index: 10;
+}
+
+// cat styles
+.canvas .cat{
+    @include photos(15%, 22px, 65px);
+}
+
+// dog styles
+.canvas .dog{
+    @include photos(18%, 15px, 55px);
+}
+
+// plant styles
+.canvas .plant{
+    @include photos(15%, 490px, 65px);
+}
+
+// diffuser styles
+.canvas .diffuser{
+    @include photos(2.5%, 350px, 266px);
+}
+
+// music styles
+.canvas .music{
+    @include photos(3%, 285px, 317px);
+}
+
+// snack styles
+.canvas .snack{
+    @include photos(5%, 160px, 130px);
+}
+
+// tea styles
+.canvas .tea{
+    @include photos(2%, 195px, 130px);
+}
+
+// coffee styles
+.canvas .coffee{
+    @include photos(2%, 195px, 130px);
+}
+
+// notebook styles
+.canvas .notebook{
+    @include photos(5%, 300px, 114px);
+    z-index: 20;
+}
+
+// notebook styles on desk
+.canvas .imageContainer.notebook.onDesk{
+    @include photos(5%, 280px, 164px);
+}
+
+// laptop styles
+.canvas .laptop{
+    @include photos(7%, 350px, 114px);
+}
+
+// laptop styles on desk
+.canvas .imageContainer.laptop.onDesk{
+    @include photos(7%, 355px, 164px);
+}
+
+// lamp styles
+.canvas .lamp{
+    @include photos(30%, 430px, 65px);
+    z-index: 20;
 }

@@ -241,6 +241,12 @@ h1 {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 90%;
@@ -305,7 +311,7 @@ h2:first-of-type::after {
   width: 185px;
 }
 
-h3 {
+.canvas .imageContainer {
   display: none;
 }
 
@@ -321,17 +327,32 @@ h3 {
 }
 
 .show {
-  display: block;
+  display: block !important;
 }
 
 main {
   height: 100vh;
-  padding-top: 160px;
+  padding-top: 120px;
 }
 
 header {
-  padding: 250px 0 50px;
   height: 100vh;
+}
+
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .writtenContent {
+  width: 70%;
+  padding: 250px 0 50px;
 }
 
 header p {
@@ -353,6 +374,11 @@ header button:hover,
 header button:focus {
   background-color: #f3e8e1;
   cursor: pointer;
+}
+
+header .imageContainer {
+  width: 25%;
+  padding-top: 50px;
 }
 
 .options {
@@ -402,6 +428,133 @@ input[type="radio"] {
 }
 
 .canvas {
-  width: 55%;
-  background-color: #f3e8e1;
+  margin-top: 40px;
+  width: 650px;
+  background-image: url(../assets/background-02.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.canvas .couch {
+  width: 40%;
+  left: 235px;
+  bottom: 65px;
+  position: absolute;
+}
+
+.canvas .desk {
+  width: 28%;
+  left: 260px;
+  bottom: 60px;
+  position: absolute;
+  z-index: 30;
+}
+
+.canvas .beanBag {
+  width: 25%;
+  left: 275px;
+  bottom: 65px;
+  position: absolute;
+}
+
+.canvas .coffeeTable {
+  width: 35%;
+  left: 250px;
+  bottom: 55px;
+  position: absolute;
+  z-index: 10;
+}
+
+.canvas .cat {
+  width: 15%;
+  left: 22px;
+  bottom: 65px;
+  position: absolute;
+}
+
+.canvas .dog {
+  width: 18%;
+  left: 15px;
+  bottom: 55px;
+  position: absolute;
+}
+
+.canvas .plant {
+  width: 15%;
+  left: 490px;
+  bottom: 65px;
+  position: absolute;
+}
+
+.canvas .diffuser {
+  width: 2.5%;
+  left: 350px;
+  bottom: 266px;
+  position: absolute;
+}
+
+.canvas .music {
+  width: 3%;
+  left: 285px;
+  bottom: 317px;
+  position: absolute;
+}
+
+.canvas .snack {
+  width: 5%;
+  left: 160px;
+  bottom: 130px;
+  position: absolute;
+}
+
+.canvas .tea {
+  width: 2%;
+  left: 195px;
+  bottom: 130px;
+  position: absolute;
+}
+
+.canvas .coffee {
+  width: 2%;
+  left: 195px;
+  bottom: 130px;
+  position: absolute;
+}
+
+.canvas .notebook {
+  width: 5%;
+  left: 300px;
+  bottom: 114px;
+  position: absolute;
+  z-index: 20;
+}
+
+.canvas .imageContainer.notebook.onDesk {
+  width: 5%;
+  left: 280px;
+  bottom: 164px;
+  position: absolute;
+}
+
+.canvas .laptop {
+  width: 7%;
+  left: 350px;
+  bottom: 114px;
+  position: absolute;
+}
+
+.canvas .imageContainer.laptop.onDesk {
+  width: 7%;
+  left: 355px;
+  bottom: 164px;
+  position: absolute;
+}
+
+.canvas .lamp {
+  width: 30%;
+  left: 430px;
+  bottom: 65px;
+  position: absolute;
+  z-index: 20;
 }

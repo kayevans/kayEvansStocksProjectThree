@@ -7,8 +7,10 @@ makeStudySpace.$coffeeTableInput = $('input#coffeeTable');
 
 // make function to show the photo on the canvas and pass value selected
 makeStudySpace.showPhoto = function(value){
-    // make variable for the selected photo ** SUB THIS OUT LATER ****
-    let chosenPhoto = $(`h3.${value}`);
+    // make variable for the selected photo 
+    let chosenPhoto = $(`.canvas .imageContainer.${value}`);
+
+    console.log(chosenPhoto);
     
     // toggle the show class on the chosen photo
     chosenPhoto.toggleClass('show');
@@ -35,21 +37,32 @@ makeStudySpace.checkSiblings = function (value, category) {
 // make function that checks to see if desk or coffee table is selected, if value is laptop or notebook
 makeStudySpace.checkValue = function(value){
 
-    // if table or coffee table selected, then show the selections
-    if (makeStudySpace.$deskInput.prop('checked') || makeStudySpace.$coffeeTableInput.prop('checked')) {
+    // if coffee table selected, then show the selections
+    if (makeStudySpace.$coffeeTableInput.prop('checked')) {
         // then call function to show the photos
+        makeStudySpace.showPhoto(value);
+
+        // if desk selected, then add class to style, and show the selections
+    } else if (makeStudySpace.$deskInput.prop('checked')){
+        // add class of on desk to position
+        $(`.canvas .imageContainer.${value}`).addClass('onDesk');
+
+        // show the photos
         makeStudySpace.showPhoto(value);
 
         // if not selected, throw error
     } else {
         alert('You need to choose a desk or coffee table!');
         // remove the checked property after alert
-        $('input#laptop').prop('checked', false);
+        $(`input#${value}`).prop('checked', false);
     }
 }
 
 // initializing function
 makeStudySpace.init = function(){
+
+    // clear values on reload
+    $(`input`).prop('checked', false);
 
     // when click the start button, scroll down to the main
     $('.startButton').on('click', function(){
@@ -65,7 +78,7 @@ makeStudySpace.init = function(){
     // when the radio buttons chosen, collect value and show the selected photo
     $('input[type=radio]').on('click', function(){
         // store the sitting pics in variable
-        let sitting = $('h3.radio');
+        let sitting = $('.canvas .imageContainer.radio');
         // clear it before showing a new one
         sitting.removeClass('show');
 
@@ -85,12 +98,19 @@ makeStudySpace.init = function(){
         if (selectedValue === 'laptop' || selectedValue === 'notebook') {
             // call the checkvalue function, pass the value
             makeStudySpace.checkValue(selectedValue);
-
             // if value is tea or coffee, checks if siblings with same class are checked
         } else if (selectedValue === 'tea' || selectedValue === 'coffee'){
             makeStudySpace.checkSiblings(selectedValue, 'drink');
+
+            // if value is cat or dog, check if siblings with same class are checked
         } else if (selectedValue === 'cat' || selectedValue === 'dog'){
             makeStudySpace.checkSiblings(selectedValue, 'animal');
+
+            // if coffeeTable is selected, and desk is checked, throw an error
+        } else if (selectedValue === 'coffeeTable' && makeStudySpace.$deskInput.prop('checked')){
+            alert('You can only have one table type device!');
+
+            // else, show the photo
         } else{
             // call function that shows the photo
             makeStudySpace.showPhoto(selectedValue);

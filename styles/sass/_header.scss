@@ -1,7 +1,18 @@
 // header styles
 header{
-    padding: 250px 0 50px;
     height: 100vh;
+}
+
+// flex the items in the wrapper
+header .wrapper{
+    @include flex;
+    justify-content: space-between;
+}
+
+// written content section
+header .writtenContent{
+    width: 70%;
+    padding: 250px 0 50px;
 }
 
 // paragraph styles
@@ -24,6 +35,12 @@ header button{
 header button:hover,
 header button:focus{
     @include buttonHover;
+}
+
+// change size of the image container
+header .imageContainer{
+    width: 25%;
+    padding-top: 50px;
 }
 
 

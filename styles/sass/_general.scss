@@ -5,6 +5,13 @@ h1{
     padding: 0;
 }
 
+// default img styling
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 // wrapper styles
 .wrapper{
     max-width: 1200px;
@@ -80,8 +87,8 @@ h2:first-of-type::after{
     width: 185px;
 }
 
-// h3 styles
-h3{
+// default image styles
+.canvas .imageContainer{
     display: none;
 }
 
@@ -93,11 +100,11 @@ h3{
 
 // the class to show things in JS
 .show{
-    display: block;
+    display: block !important;
 }
 
 // make the main take up the entire hieght
 main{
     height: 100vh;
-    padding-top: 160px;
+    padding-top: 120px;
 }

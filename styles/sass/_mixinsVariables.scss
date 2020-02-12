@@ -4,8 +4,8 @@ $headingFont: 'Zilla Slab', serif;
 
 // my colour variables
 $mainColour: #f3e8e1;
-$color: #1f3634;
-$color2: #366947;
+// $color: #1f3634;
+// $color2: #ac836c;
 
 
 // mixins
@@ -25,4 +25,12 @@ $color2: #366947;
 @mixin buttonHover{
     background-color: $mainColour;
     cursor: pointer;
+}
+
+// function to style the images
+@mixin photos($width, $left, $bottom) {
+    width: $width;
+    left: $left;
+    bottom: $bottom;
+    position: absolute;
 }
