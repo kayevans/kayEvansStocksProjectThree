@@ -1,8 +1,12 @@
 @media (max-width: 1200px){
 
-    // HEADER STYLES
-    h1{
+    //                      HEADER STYLES
+    // change padding on written content
+    header .writtenContent{
+        padding: 200px 0 100px;
     }
+
+    //                      GENERAL STYLES
 
     // MAIN STYLES
     // make the main into column and center elements
@@ -17,11 +21,25 @@
         padding: 30px 0 50px;
     }
 
-    // OPTIONS STYLES
+    //                      OPTIONS STYLES
     .options{
         width: 50%;
     }
 
 
+
+}
+
+@media (max-width: 800px){
+    //                      HEADER STYLES
+    // remove 100vh
+    header{
+        height: auto;
+    }
+
+    //                  OPTIONS STYLES
+    .options{
+        width: 80%;
+    }
 
 }

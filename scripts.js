@@ -61,6 +61,11 @@ makeStudySpace.checkValue = function(value){
 // initializing function
 makeStudySpace.init = function(){
 
+    // if the width of the screen is less than 750 tell them to turn their phone
+    if($(window).width() < 750){
+        alert('Please turn your phone to landscape to enjoy!');
+    }
+
     // clear values on reload
     $(`input`).prop('checked', false);
 
