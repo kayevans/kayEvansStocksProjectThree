@@ -1,8 +1,27 @@
 @media (max-width: 1200px){
-    // CANVAS STYLES
+
+    // HEADER STYLES
+    h1{
+    }
+
+    // MAIN STYLES
+    // make the main into column and center elements
     .flexContainer{
         flex-direction: column;
         align-items: center;
     }
+
+    // change main styles
+    main{
+        height: auto;
+        padding: 30px 0 50px;
+    }
+
+    // OPTIONS STYLES
+    .options{
+        width: 50%;
+    }
+
+
 
 }
