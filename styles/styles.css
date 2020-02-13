@@ -267,7 +267,9 @@ body {
 h1,
 h2,
 label,
-button {
+button,
+.swal-title,
+.swal-button {
   font-family: "Zilla Slab", serif;
   text-transform: lowercase;
 }
@@ -319,6 +321,39 @@ main {
   padding-top: 120px;
 }
 
+.swal-title,
+.swal-button {
+  font-weight: 300;
+}
+
+.swal-title {
+  font-size: 2.4rem;
+}
+
+.swal-button {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  padding: 8px 0;
+  font-size: 1.6rem;
+  width: 120px;
+  border-radius: 0;
+}
+
+.swal-button:not([disabled]):hover,
+.swal-button:not([disabled]):focus {
+  background-color: #f3e8e1;
+  cursor: pointer;
+}
+
+.swal-footer {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
 header {
   height: 100vh;
 }
@@ -346,14 +381,15 @@ header p {
 }
 
 header button {
-  font-size: 2rem;
-  background-color: transparent;
-  border: 1px solid black;
-  width: 150px;
-  padding: 8px 0;
+  margin-top: 30px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  margin-top: 30px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  padding: 8px 0;
+  font-size: 2rem;
+  width: 150px;
 }
 
 header button:hover,

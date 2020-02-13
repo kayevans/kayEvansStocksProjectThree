@@ -9,8 +9,6 @@ makeStudySpace.$coffeeTableInput = $('input#coffeeTable');
 makeStudySpace.showPhoto = function(value){
     // make variable for the selected photo 
     let chosenPhoto = $(`.canvas .imageContainer.${value}`);
-
-    console.log(chosenPhoto);
     
     // toggle the show class on the chosen photo
     chosenPhoto.toggleClass('show');
@@ -19,13 +17,18 @@ makeStudySpace.showPhoto = function(value){
 // make function that checks if there is a sibling already checked
 makeStudySpace.checkSiblings = function (value, category) {
 
-
     // if one element is selected, check if something in same category is checked
     if ($(`input#${value}`).siblings(`.${category}`).prop('checked')) {
+
         // throw alert that only one can be selected
-        alert(`You can only have one ${category}!`);
-        // remove the checked property after alert
-        $(`input#${value}`).prop('checked', false);
+        swal({
+            title: `You can only have one ${category}!`,
+            button: 'Okay.',
+
+            // remove the checked property after alert
+        }).then(() => {
+            $(`input#${value}`).prop('checked', false);
+        });
 
         // if not selected, show it
     } else {
@@ -52,20 +55,28 @@ makeStudySpace.checkValue = function(value){
 
         // if not selected, throw error
     } else {
-        alert('You need to choose a desk or coffee table!');
-        // remove the checked property after alert
-        $(`input#${value}`).prop('checked', false);
+        // throw alert that only one can be selected
+        swal({
+            title: `You need to choose a desk or coffee table!`,
+            button: 'Okay.',
+
+            // remove the checked property after alert
+        }).then(() => {
+            $(`input#${value}`).prop('checked', false);
+        });
     }
 }
 
 // initializing function
 makeStudySpace.init = function(){
 
-    // swal("Hello world!");
-
     // if the width of the screen is less than 750 tell them to turn their phone
     if($(window).width() <= 750){
-        alert('Please turn your phone to landscape to enjoy!');
+        // add a sweet alert
+        swal({
+            title: 'Please turn your phone to landscape to enjoy!',
+            button: 'Okay.',
+        });
     }
 
     // clear values on reload
@@ -83,20 +94,26 @@ makeStudySpace.init = function(){
     })
 
     // when the radio buttons chosen, collect value and show the selected photo
-    $('input[type=radio]').on('click', function(){
+    $('input[type=radio]').on('change', function(){
         // store the sitting pics in variable
         let sitting = $('.canvas .imageContainer.radio');
         // clear it before showing a new one
         sitting.removeClass('show');
 
         // store the value in variable
-        let selectedValue = $('input[name=sitting]:checked').val();
+        let selectedValue = $(this).val();
 
         // if select desk, and coffee table is checked, send alert
         if (selectedValue === 'desk' && $('input#coffeeTable').prop('checked')) {
-            alert('You can only have one table type device!');
-            // uncheck the desk
-            $(`input#desk`).prop('checked', false);
+            // send alert
+            swal({
+                title: 'You can only have one table type device!',
+                button: 'Okay.',
+
+                // uncheck the desk input
+            }).then(()=>{
+                $(`input#desk`).prop('checked', false); 
+            });
 
             // or else, show photo as normal
         } else {
@@ -125,9 +142,15 @@ makeStudySpace.init = function(){
 
             // if coffeeTable is selected, and desk is checked, throw an error
         } else if (selectedValue === 'coffeeTable' && makeStudySpace.$deskInput.prop('checked')){
-            alert('You can only have one table type device!');
-            // uncheck the coffeetable 
-            $(`input#coffeeTable`).prop('checked', false);
+            // send alert
+            swal({
+                title: 'You can only have one table type device!',
+                button: 'Okay.',
+
+                // uncheck the coffeetable input
+            }).then(() => {
+                $(`input#coffeeTable`).prop('checked', false);
+            });
 
             // else, show the photo
         } else{

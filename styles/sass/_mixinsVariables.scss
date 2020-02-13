@@ -10,22 +10,34 @@ $mainColour: #f3e8e1;
 
 // mixins
 
-// easy function to add flex
+// function to add flex
 @mixin flex(){
     display: flex;
     flex-wrap: wrap;
 }
 
 // function to make transition for animations
-@mixin transition {
+@mixin transition(){
     transition: all 0.5s ease;
 }
 
 // function to make button styles on hover
-@mixin buttonHover{
+@mixin buttonHover(){
     background-color: $mainColour;
     cursor: pointer;
 }
+
+// function to make button for alert and header
+@mixin buttonStyles($fontSize, $width){
+    @include transition;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    padding: 8px 0;
+    font-size: $fontSize;
+    width: $width;
+}
+
 
 // function to style the images
 @mixin photos($width, $left, $bottom) {

@@ -23,13 +23,8 @@ header p{
 
 // start button styles
 header button{
-    font-size: 2rem;
-    background-color: transparent;
-    border: 1px solid black;
-    width: 150px;
-    padding: 8px 0;
-    @include transition;
     margin-top: 30px;
+    @include buttonStyles(2rem, 150px);
 }
 
 // change styles on hover

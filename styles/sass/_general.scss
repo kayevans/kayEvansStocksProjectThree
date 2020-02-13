@@ -36,7 +36,9 @@ body{
 h1,
 h2,
 label,
-button{
+button,
+.swal-title,
+.swal-button{
     font-family: $headingFont;
     text-transform: lowercase;
 }
@@ -88,4 +90,34 @@ h2{
 main{
     height: 100vh;
     padding-top: 120px;
+}
+
+// alert styles
+.swal-title,
+.swal-button{
+    font-weight: 300;
+}
+
+// change size of title
+.swal-title{
+    font-size: 2.4rem;
+}
+
+// the button styles
+.swal-button{
+    @include buttonStyles(1.6rem, 120px);
+    border-radius: 0;
+}
+
+// change the colour of the buttons
+.swal-button:not([disabled]):hover,
+.swal-button:not([disabled]):focus{
+    @include buttonHover;
+}
+
+// center the button | change spacing around it
+.swal-footer{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
 }
