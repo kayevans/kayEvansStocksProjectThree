@@ -37,9 +37,69 @@
         height: auto;
     }
 
+    //                      HEADER STYLES
+    // change padding on written content
+    header .writtenContent{
+        padding: 200px 0 150px;
+    }
+
+    // change spacing 
+    header .imageContainer{
+        padding-top: 150px;
+        width: 200px;
+    }
+
+
     //                  OPTIONS STYLES
     .options{
         width: 80%;
     }
 
 }
+
+@media (max-width: 700px){
+
+
+    //              HEADER STYLES
+
+    header .wrapper{
+        flex-direction: column;
+    }
+
+    // change padding on written content
+    header .writtenContent{
+        padding: 180px 0;
+        width: 90%;
+    }
+
+    // hide the photo on mobile
+    header .imageContainer{
+        display: none;
+    }
+
+    //              MAIN STYLES
+    main{
+        padding: 10px 0 50px;
+    }
+
+    //              CANVAS STYLES
+
+    // change width of the canvas
+    .canvas{
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 500px){
+
+    //              MAIN STYLES
+
+    // change width of the main
+    main .wrapper{
+        width: 100%;
+    }
+}
+
+
+// only went to 500px as it is the smallest height i could find of phone, and i have a alert to say to turn phone

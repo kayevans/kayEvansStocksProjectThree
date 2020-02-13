@@ -45,7 +45,7 @@ makeStudySpace.checkValue = function(value){
         // if desk selected, then add class to style, and show the selections
     } else if (makeStudySpace.$deskInput.prop('checked')){
         // add class of on desk to position
-        $(`.canvas .imageContainer.${value}`).addClass('onDesk');
+        $(`.canvas .imageContainer.${value}`).toggleClass('onDesk');
 
         // show the photos
         makeStudySpace.showPhoto(value);
@@ -62,7 +62,7 @@ makeStudySpace.checkValue = function(value){
 makeStudySpace.init = function(){
 
     // if the width of the screen is less than 750 tell them to turn their phone
-    if($(window).width() < 750){
+    if($(window).width() <= 750){
         alert('Please turn your phone to landscape to enjoy!');
     }
 
@@ -89,8 +89,18 @@ makeStudySpace.init = function(){
 
         // store the value in variable
         let selectedValue = $('input[name=sitting]:checked').val();
-        // call function to show the selected photo
-        makeStudySpace.showPhoto(selectedValue);
+
+        // if select desk, and coffee table is checked, send alert
+        if (selectedValue === 'desk' && $('input#coffeeTable').prop('checked')) {
+            alert('You can only have one table type device!');
+            // uncheck the desk
+            $(`input#desk`).prop('checked', false);
+
+            // or else, show photo as normal
+        } else {
+            // call function to show the selected photo
+            makeStudySpace.showPhoto(selectedValue);
+        }
     })
 
     // when the checkbox is clicked, collect the value

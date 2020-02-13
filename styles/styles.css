@@ -363,8 +363,7 @@ header button:focus {
 }
 
 header .imageContainer {
-  min-width: 240px;
-  width: 25%;
+  width: 280px;
   padding-top: 60px;
 }
 
@@ -576,7 +575,43 @@ input[type="radio"] {
   header {
     height: auto;
   }
+  header .writtenContent {
+    padding: 200px 0 150px;
+  }
+  header .imageContainer {
+    padding-top: 150px;
+    width: 200px;
+  }
   .options {
     width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  header .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .writtenContent {
+    padding: 180px 0;
+    width: 90%;
+  }
+  header .imageContainer {
+    display: none;
+  }
+  main {
+    padding: 10px 0 50px;
+  }
+  .canvas {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  main .wrapper {
+    width: 100%;
   }
 }
