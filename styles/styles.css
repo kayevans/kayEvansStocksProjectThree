@@ -710,7 +710,7 @@ input[type="radio"] {
   .canvas .lamp {
     width: 30%;
     left: 330px;
-    bottom: 45px;
+    bottom: 42px;
     position: absolute;
     z-index: 20;
   }

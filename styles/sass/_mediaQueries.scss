@@ -177,7 +177,7 @@
 
     // lamp styles
     .canvas .lamp{
-        @include photos(30%, 330px, 45px);
+        @include photos(30%, 330px, 42px);
         z-index: 20;
     }
 }
