@@ -608,6 +608,112 @@ input[type="radio"] {
     width: 500px;
     height: 300px;
   }
+  .canvas .couch {
+    width: 38%;
+    left: 190px;
+    bottom: 45px;
+    position: absolute;
+  }
+  .canvas .desk {
+    width: 28%;
+    left: 210px;
+    bottom: 38px;
+    position: absolute;
+    z-index: 30;
+  }
+  .canvas .beanBag {
+    width: 22%;
+    left: 225px;
+    bottom: 45px;
+    position: absolute;
+  }
+  .canvas .coffeeTable {
+    width: 35%;
+    left: 198px;
+    bottom: 30px;
+    position: absolute;
+    z-index: 10;
+  }
+  .canvas .cat {
+    width: 15%;
+    left: 22px;
+    bottom: 45px;
+    position: absolute;
+  }
+  .canvas .dog {
+    width: 18%;
+    left: 12px;
+    bottom: 35px;
+    position: absolute;
+  }
+  .canvas .plant {
+    width: 12%;
+    left: 390px;
+    bottom: 45px;
+    position: absolute;
+  }
+  .canvas .diffuser {
+    width: 2.5%;
+    left: 268px;
+    bottom: 198px;
+    position: absolute;
+  }
+  .canvas .music {
+    width: 2.5%;
+    left: 222px;
+    bottom: 237px;
+    position: absolute;
+  }
+  .canvas .snack {
+    width: 5%;
+    left: 122px;
+    bottom: 92px;
+    position: absolute;
+  }
+  .canvas .tea {
+    width: 2%;
+    left: 150px;
+    bottom: 92px;
+    position: absolute;
+  }
+  .canvas .coffee {
+    width: 2%;
+    left: 150px;
+    bottom: 92px;
+    position: absolute;
+  }
+  .canvas .notebook {
+    width: 5%;
+    left: 225px;
+    bottom: 75px;
+    position: absolute;
+    z-index: 20;
+  }
+  .canvas .imageContainer.notebook.onDesk {
+    width: 5%;
+    left: 225px;
+    bottom: 118px;
+    position: absolute;
+  }
+  .canvas .laptop {
+    width: 7%;
+    left: 285px;
+    bottom: 76px;
+    position: absolute;
+  }
+  .canvas .imageContainer.laptop.onDesk {
+    width: 7%;
+    left: 280px;
+    bottom: 119px;
+    position: absolute;
+  }
+  .canvas .lamp {
+    width: 30%;
+    left: 330px;
+    bottom: 45px;
+    position: absolute;
+    z-index: 20;
+  }
 }
 
 @media (max-width: 500px) {

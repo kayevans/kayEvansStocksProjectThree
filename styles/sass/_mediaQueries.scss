@@ -89,8 +89,100 @@
         width: 500px;
         height: 300px;
     }
+
+    // ALL THE SELECTION STYLES
+
+    // couch styles
+    .canvas .couch{
+        @include photos(38%, 190px, 45px);
+    }
+
+    // desk styles
+    .canvas .desk{
+        @include photos(28%, 210px, 38px);
+        z-index: 30;
+    }
+
+    // beanbag styles
+    .canvas .beanBag{
+        @include photos(22%, 225px, 45px);
+    }
+
+    // coffee table styles
+    .canvas .coffeeTable{
+        @include photos(35%, 198px, 30px);
+        z-index: 10;
+    }
+
+    // cat styles
+    .canvas .cat{
+        @include photos(15%, 22px, 45px);
+    }
+
+    // dog styles
+    .canvas .dog{
+        @include photos(18%, 12px, 35px);
+    }
+
+    // plant styles
+    .canvas .plant{
+        @include photos(12%, 390px, 45px);
+    }
+
+    // diffuser styles
+    .canvas .diffuser{
+        @include photos(2.5%, 268px, 198px);
+    }
+
+    // music styles
+    .canvas .music{
+        @include photos(2.5%, 222px, 237px);
+    }
+
+    // snack styles
+    .canvas .snack{
+        @include photos(5%, 122px, 92px);
+    }
+
+    // tea styles
+    .canvas .tea{
+        @include photos(2%, 150px, 92px);
+    }
+
+    // coffee styles
+    .canvas .coffee{
+        @include photos(2%, 150px, 92px);
+    }
+
+    // notebook styles
+    .canvas .notebook{
+        @include photos(5%, 225px, 75px);
+        z-index: 20;
+    }
+
+    // notebook styles on desk
+    .canvas .imageContainer.notebook.onDesk{
+        @include photos(5%, 225px, 118px);
+    }
+
+    // laptop styles
+    .canvas .laptop{
+        @include photos(7%, 285px, 76px);
+    }
+
+    // laptop styles on desk
+    .canvas .imageContainer.laptop.onDesk{
+        @include photos(7%, 280px, 119px);
+    }
+
+    // lamp styles
+    .canvas .lamp{
+        @include photos(30%, 330px, 45px);
+        z-index: 20;
+    }
 }
 
+// only went to 500px as it is the smallest height i could find of phone, and i have a alert to say to turn phone
 @media (max-width: 500px){
 
     //              MAIN STYLES
@@ -101,5 +193,3 @@
     }
 }
 
-
-// only went to 500px as it is the smallest height i could find of phone, and i have a alert to say to turn phone
