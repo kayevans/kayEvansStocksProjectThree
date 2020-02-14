@@ -279,15 +279,15 @@ h2 {
   line-height: 1;
 }
 
+.highlight {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), color-stop(40%, #f3e8e1));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, #f3e8e1 40%);
+}
+
 h1 {
   font-size: 6rem;
   font-weight: 300;
   padding-bottom: 20px;
-}
-
-.highlight {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(255, 255, 255, 0)), color-stop(40%, #f3e8e1));
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, #f3e8e1 40%);
 }
 
 h2 {
@@ -297,28 +297,28 @@ h2 {
   margin: 10px 0;
 }
 
-.canvas .imageContainer {
-  display: none;
+main {
+  height: 100vh;
+  padding-top: 120px;
 }
 
 .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.canvas .imageContainer {
+  display: none;
 }
 
 .canvas .imageContainer.show {
   display: block;
-}
-
-main {
-  height: 100vh;
-  padding-top: 120px;
 }
 
 .swal-title,
@@ -362,11 +362,11 @@ header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
@@ -411,11 +411,11 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -627,6 +627,9 @@ input[type="radio"] {
   header {
     height: auto;
   }
+  main {
+    padding-top: 60px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -644,7 +647,7 @@ input[type="radio"] {
     display: none;
   }
   main {
-    padding: 10px 0 50px;
+    padding-top: 20px;
   }
   .canvas {
     width: 500px;
@@ -712,12 +715,7 @@ input[type="radio"] {
     bottom: 92px;
     position: absolute;
   }
-  .canvas .tea {
-    width: 2%;
-    left: 150px;
-    bottom: 92px;
-    position: absolute;
-  }
+  .canvas .tea,
   .canvas .coffee {
     width: 2%;
     left: 150px;

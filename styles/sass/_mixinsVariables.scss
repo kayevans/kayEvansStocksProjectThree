@@ -1,28 +1,28 @@
+// VARIABLES
+
 // my font variables
 $bodyFont: 'Lato', sans-serif;
 $headingFont: 'Zilla Slab', serif;
 
 // my colour variables
 $mainColour: #f3e8e1;
-// $color: #1f3634;
-// $color2: #ac836c;
 
-
-// mixins
+// MIXINS
 
 // function to add flex
-@mixin flex(){
+@mixin flex{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 // function to make transition for animations
-@mixin transition(){
+@mixin transition{
     transition: all 0.5s ease;
 }
 
-// function to make button styles on hover
-@mixin buttonHover(){
+// function to make button styles on hover and focus
+@mixin buttonHover{
     background-color: $mainColour;
     cursor: pointer;
 }

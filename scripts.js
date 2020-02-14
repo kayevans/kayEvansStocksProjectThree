@@ -52,8 +52,12 @@ makeStudySpace.checkSiblings = function (value, category) {
 
 // make function to clear all table top items
 makeStudySpace.clearTableTop = function(){
+
+    // take off checked of the table items
     $(`input#notebook`).prop('checked', false);
     $(`input#laptop`).prop('checked', false);
+
+    // remove the show class on the images
     $(`.canvas .imageContainer.notebook`).removeClass('show');
     $(`.canvas .imageContainer.laptop`).removeClass('show');
     $(`.canvas .imageContainer.desk`).removeClass('show');
@@ -67,7 +71,7 @@ makeStudySpace.checkForTable = function(value){
     if (makeStudySpace.$coffeeTableInput.prop('checked')) {
         // remove the class of ondesk
         $(`.canvas .imageContainer.${value}`).removeClass('onDesk');
-        
+
         // then call function to show the photos
         makeStudySpace.showPhoto(value);
 
@@ -108,12 +112,12 @@ makeStudySpace.eventListeners = function(){
 
     // when the radio buttons chosen, collect value and show the selected photo
     $('input[type=radio]').on('change', function () {
-        // store the sitting pics in variable
+        // store the base pics in variable
         let sitting = $('.canvas .imageContainer.radio');
         // clear it before showing a new one
         sitting.removeClass('show');
 
-        // store the value in variable
+        // store the selected value in variable
         let selectedValue = $(this).val();
 
         // if select desk, and coffee table is checked, send alert
@@ -123,9 +127,11 @@ makeStudySpace.eventListeners = function(){
 
             // if input of desk is not checked, clear table top items
         } else if (!$('input#desk').prop('checked')){
-
+            // call function to clear the table top items
             makeStudySpace.clearTableTop();
+            // call function to show photo of selected item
             makeStudySpace.showPhoto(selectedValue);
+            
             // or else, show photo as normal
         } else {
             // call function to show the selected photo
@@ -156,10 +162,12 @@ makeStudySpace.eventListeners = function(){
             // call function to check if other table is selected
             makeStudySpace.alertTabletop(selectedValue);
 
-            // else, show the photo
+            // if the clicked item is coffeetable and it is not checked, then call function to hide all table related items
         } else if (selectedValue === 'coffeeTable' && !$('input#coffeeTable').prop('checked')){
-            
+            // call clear table top function 
             makeStudySpace.clearTableTop();
+
+            // else, show the photo
         } else {
             // call function that shows the photo
             makeStudySpace.showPhoto(selectedValue);

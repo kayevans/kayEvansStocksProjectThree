@@ -43,11 +43,17 @@ button,
     text-transform: lowercase;
 }
 
+// change lineheight of the headings
 h1,
 h2{
     line-height: 1;
 }
 
+// add background highlight
+// found this trick on: https://thirtyeightvisuals.com/blog/low-highlight-heading-links-squarespace
+.highlight{
+    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, $mainColour 40%);
+}
 
 // heading styles
 h1{
@@ -56,11 +62,6 @@ h1{
     padding-bottom: 20px;  
 }
 
-// add background highlight
-// found this trick on: https://thirtyeightvisuals.com/blog/low-highlight-heading-links-squarespace
-.highlight{
-    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, $mainColour 40%);
-}
 
 // h2 styles
 h2{
@@ -70,26 +71,25 @@ h2{
     margin: 10px 0;
 }
 
-// default image styles
-.canvas .imageContainer{
-    display: none;
+// make the main take up the entire hieght
+main{
+    height: 100vh;
+    padding-top: 120px;
 }
 
 // the main section styles
 .flexContainer{
     @include flex;
-    justify-content: space-between;
+}
+
+// default image styles
+.canvas .imageContainer{
+    display: none;
 }
 
 // the class to show things in JS
 .canvas .imageContainer.show{
     display: block;
-}
-
-// make the main take up the entire hieght
-main{
-    height: 100vh;
-    padding-top: 120px;
 }
 
 // alert styles

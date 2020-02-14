@@ -6,7 +6,6 @@
 // flex the items in the form
 form{
     @include flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -16,7 +15,6 @@ label{
     font-size: 2rem;
     width: 30%;
     padding: 5px;
-    // border: 1px solid black;
     text-align: center;
     margin: 10px 0;
     @include transition;
@@ -30,7 +28,7 @@ input[type="checkbox"]:focus + label{
     @include buttonHover;
 }
 
-// TEMP: when label clicked/selected, change background colour
+// when label clicked/selected, make it same as button on hover
 input[type="radio"]:checked + label,
 input[type="checkbox"]:checked + label{
     @include buttonHover;

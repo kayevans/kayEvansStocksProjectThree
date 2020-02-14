@@ -1,9 +1,8 @@
-// canvas overall styles
+// canvas overall styles | make it a specific width and height for positioning | make position relative for the internal images
 .canvas{
     margin-top: 40px;
     width: 650px;
     height: 400px;
-    // background-color: $mainColour;
     background-image: url(../assets/background-02.png);
     background-repeat: no-repeat;
     background-size: contain;

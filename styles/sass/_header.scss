@@ -1,4 +1,4 @@
-// header styles
+// header styles 
 header{
     height: 100vh;
 }
@@ -6,7 +6,7 @@ header{
 // flex the items in the wrapper
 header .wrapper{
     @include flex;
-    justify-content: space-between;
+    // ensure it doesnt wrap
     flex-wrap: nowrap;
 }
 
@@ -33,7 +33,7 @@ header button:focus{
     @include buttonHover;
 }
 
-// change size of the image container
+//  image container styles
 header .imageContainer{
     width: 280px;
     padding-top: 60px;

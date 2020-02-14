@@ -17,17 +17,16 @@
 
     // change main styles
     main{
+        // remove 100vh
         height: auto;
         padding: 30px 0 50px;
     }
 
     //                      OPTIONS STYLES
+    // change width
     .options{
         width: 50%;
     }
-
-
-
 }
 
 @media (max-width: 800px){
@@ -51,17 +50,23 @@
 
 
     //                  OPTIONS STYLES
+    // make section bigger
     .options{
         width: 80%;
     }
 
 }
 
-// since i am styling as a landscape, do this so the 100vh doesnt mess things up
+// since i am styling as a landscape, make height media querie so the 100vh doesnt mess things up
 @media (max-height: 800px){
     // remove 100vh on landscape
     header{
         height: auto;
+    }
+
+    // change main padding
+    main{
+        padding-top: 60px;
     }
 }
 
@@ -70,6 +75,7 @@
 
     //              HEADER STYLES
 
+    // make it into column
     header .wrapper{
         flex-direction: column;
     }
@@ -86,8 +92,9 @@
     }
 
     //              MAIN STYLES
+    // change spacing
     main{
-        padding: 10px 0 50px;
+        padding-top: 20px;
     }
 
     //              CANVAS STYLES
@@ -152,12 +159,8 @@
         @include photos(5%, 122px, 92px);
     }
 
-    // tea styles
-    .canvas .tea{
-        @include photos(2%, 150px, 92px);
-    }
-
-    // coffee styles
+    // tea and tea styles
+    .canvas .tea,
     .canvas .coffee{
         @include photos(2%, 150px, 92px);
     }
