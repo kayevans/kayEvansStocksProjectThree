@@ -600,7 +600,7 @@ input[type="radio"] {
   }
   main {
     height: auto;
-    padding: 30px 0 50px;
+    padding: 70px 0 50px;
   }
   .options {
     width: 50%;
@@ -610,6 +610,9 @@ input[type="radio"] {
 @media (max-width: 800px) {
   header {
     height: auto;
+  }
+  main {
+    padding-top: 60px;
   }
   header .writtenContent {
     padding: 200px 0 150px;
@@ -626,9 +629,6 @@ input[type="radio"] {
 @media (max-height: 800px) {
   header {
     height: auto;
-  }
-  main {
-    padding-top: 60px;
   }
 }
 

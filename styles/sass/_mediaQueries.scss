@@ -19,7 +19,7 @@
     main{
         // remove 100vh
         height: auto;
-        padding: 30px 0 50px;
+        padding: 70px 0 50px;
     }
 
     //                      OPTIONS STYLES
@@ -34,6 +34,11 @@
     // remove 100vh
     header{
         height: auto;
+    }
+
+    // change main padding
+    main{
+        padding-top: 60px;
     }
 
     //                      HEADER STYLES
@@ -62,11 +67,6 @@
     // remove 100vh on landscape
     header{
         height: auto;
-    }
-
-    // change main padding
-    main{
-        padding-top: 60px;
     }
 }
 
